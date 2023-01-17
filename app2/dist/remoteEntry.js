@@ -513,8 +513,8 @@ var app2;
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	var __webpack_exports__ = __webpack_require__("webpack/container/entry/app2");
-  console.log('scope app2 is created')
   /******/ 	app2 = __webpack_exports__;
 /******/ 	
 /******/ })()
+console.log('scope app2 is created', window.app2)
 ;
