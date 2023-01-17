@@ -198,7 +198,9 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			}
 /******/ 			inProgress[url] = [done];
 /******/ 			var onScriptComplete = (prev, event) => {
-							console.log(url, key, 'is loaded and executed')
+							if(event.type !== 'error') {
+								console.log(url, key, 'is loaded and executed')
+							}
 
 					/******/ 				// avoid mem leaks in IE.
 /******/ 				script.onerror = script.onload = null;
